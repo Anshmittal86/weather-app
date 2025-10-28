@@ -1,3 +1,28 @@
+@font-face {
+  font-family: 'dm-sans-light';
+  src: url('../../../fonts/DM_Sans/static/DMSans-Light.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-medium';
+  src: url('../../../public/fonts/DM_Sans/static/DMSans-Medium.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-semiBold';
+  src: url('../../../public/fonts/DM_Sans/static/DMSans-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-semiBoldItalic';
+  src: url('../../../public/fonts/DM_Sans/static/DMSans-SemiBoldItalic.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-bold';
+  src: url('../../../public/fonts/DM_Sans/static/DMSans-Bold.ttf');
+}
+@font-face {
+  font-family: 'bricolage-grotesque-bold';
+  src: url('../../../public/fonts/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf');
+}
+
 :root {
   /* Neutral color palette */
   --clr-neutral-900: hsl(243, 96%, 9%);
@@ -26,8 +51,8 @@
   --fw-bold: 700;
 
   /* font families  */
-  --ff-primary: 'DM Sans', sans-serif;
-  --ff-secondary: 'Bricolage Grotesque', sans-serif;
+  --ff-primary: 'dm-sans-light', sans-serif;
+  --ff-secondary: 'dm-sans-bold', sans-serif;
 }
 
 * {
