@@ -4,23 +4,23 @@
 }
 @font-face {
   font-family: 'dm-sans-medium';
-  src: url('../../../public/fonts/DM_Sans/static/DMSans-Medium.ttf');
+  src: url('../../../fonts/DM_Sans/static/DMSans-Medium.ttf');
 }
 @font-face {
   font-family: 'dm-sans-semiBold';
-  src: url('../../../public/fonts/DM_Sans/static/DMSans-SemiBold.ttf');
+  src: url('../../../fonts/DM_Sans/static/DMSans-SemiBold.ttf');
 }
 @font-face {
   font-family: 'dm-sans-semiBoldItalic';
-  src: url('../../../public/fonts/DM_Sans/static/DMSans-SemiBoldItalic.ttf');
+  src: url('../../../fonts/DM_Sans/static/DMSans-SemiBoldItalic.ttf');
 }
 @font-face {
   font-family: 'dm-sans-bold';
-  src: url('../../../public/fonts/DM_Sans/static/DMSans-Bold.ttf');
+  src: url('../../../fonts/DM_Sans/static/DMSans-Bold.ttf');
 }
 @font-face {
   font-family: 'bricolage-grotesque-bold';
-  src: url('../../../public/fonts/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf');
+  src: url('../../../fonts/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf');
 }
 
 :root {
@@ -59,4 +59,12 @@
   font-family: var(--ff-primary);
   font-size: var(--fs-regular);
   color: var(--clr-neutral-0);
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background-color: var(--clr-neutral-900);
 }
