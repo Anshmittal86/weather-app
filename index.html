@@ -17,7 +17,9 @@
   <body>
     <main class="wrapper">
       <header class="header">
-        <img src="/images/logo.svg" alt="A logo of weather now app" />
+        <a href="/"
+          ><img src="/images/logo.svg" alt="A logo of weather now app" class="app-logo"
+        /></a>
 
         <div class="unit-container">
           <img src="/public/images/icon-units.svg" alt="" />
@@ -28,6 +30,67 @@
 
       <section>
         <h1>How's the sky looking today?</h1>
+
+        <form action="#" class="flex flex-center-main search-form gap-1">
+          <div class="search-group flex gap-1">
+            <img src="/images/icon-search.svg" alt="Search Icon" />
+            <input
+              type="search"
+              name="search"
+              id="search-input"
+              placeholder="Search for a place...."
+            />
+          </div>
+
+          <button class="btn btn-color-blue" type="submit">Search</button>
+        </form>
+
+        <div class="weather-info-container flex flex-center-main gap-4">
+          <div class="info-container-left flex flex-col gap-4">
+            <div class="left-top-container">
+              <picture>
+                <source media="(min-width: 578px)" srcset="./public/images/bg-today-large.svg" />
+                <img src="./public/images/bg-today-small.svg" alt="" />
+              </picture>
+
+              <div class="overlay">
+                <div class="weather-city-time">
+                  <h2>Berlin, Germany</h2>
+                  <p>Tuesday 5, August 2025</p>
+                </div>
+
+                <div class="weather-temp flex flex-center-cross gap-2">
+                  <img src="./public/images/icon-sunny.webp" alt="Sun Icon" />
+                  <span>68*</span>
+                </div>
+              </div>
+            </div>
+            <div class="left-middle-container flex gap-4">
+              <div>
+                <h3>Feels like</h3>
+                <span>64*</span>
+              </div>
+              <div>
+                <h3>Humidity</h3>
+                <span>46%</span>
+              </div>
+              <div>
+                <h3>Wind</h3>
+                <span>9 mph</span>
+              </div>
+              <div>
+                <h3>Precipitation</h3>
+                <span>O in</span>
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div class="info-container-right">
+            <div>
+              <h3>Hourly forecast</h3>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -53,22 +116,22 @@
     <!-- Search for a city, e.g., New York -->
     <!-- Search -->
 
-    <!-- Feels like -->
+    <!--  -->
     <!-- Insert temperature here -->
 
-    <!-- Humidity -->
+    <!-- -->
     <!-- Insert humidity here -->
 
-    <!-- Wind -->
+    <!-- -->
     <!-- Insert wind here -->
 
-    <!-- Precipitation -->
+    <!--  -->
     <!-- Insert precipitation here -->
 
     <!-- Daily forecast -->
     <!-- Insert daily forecast for the next 7 days here -->
 
-    <!-- Hourly forecast -->
+    <!-- -->
     <!-- Insert hourly forecast for the selected day here -->
 
     <script type="module" src="./src/assets/js/script.js" defer></script>
