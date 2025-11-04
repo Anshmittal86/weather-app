@@ -22,9 +22,9 @@
         /></a>
 
         <div class="unit-container">
-          <img src="/public/images/icon-units.svg" alt="" />
+          <img src="/images/icon-units.svg" alt="" />
           <span>Units</span>
-          <img src="/public/images/icon-dropdown.svg" alt="" />
+          <img src="/images/icon-dropdown.svg" alt="" />
 
           <div class="unit-dropdown-content flex flex-col gap-3">
             <h3>Switch to Imperial</h3>
@@ -32,24 +32,50 @@
             <div>
               <h4>Temperature</h4>
 
-              <div>Celsius(°C)</div>
-              <div>Fahrenheit(°F)</div>
+              <div class="active flex flex-between">
+                Celsius(°C)
+                <img src="/images/icon-checkmark.svg" alt="Checkmark Icon" class="hidden" />
+              </div>
+              <div class="flex flex-between">
+                Fahrenheit(°F)
+                <img src="/images/icon-checkmark.svg" alt="Checkmark Icon" class="hidden" />
+              </div>
             </div>
             <div>
               <h4>Wind Speed</h4>
-
-              <div>km/h</div>
-              <div>mph</div>
+              <div class="active flex flex-between">
+                km/h
+                <img src="/images/icon-checkmark.svg" alt="Checkmark Icon" class="hidden" />
+              </div>
+              <div class="flex flex-between">
+                mph
+                <img src="/images/icon-checkmark.svg" alt="Checkmark Icon" class="hidden" />
+              </div>
             </div>
             <div>
               <h4>Precipitation</h4>
-
-              <div>Millimeters(mm)</div>
-              <div>Inches(in)</div>
+              <div class="active flex flex-between">
+                Millimeters(mm)
+                <img src="/images/icon-checkmark.svg" alt="Checkmark Icon" class="hidden" />
+              </div>
+              <div class="flex flex-between">
+                Inches(in)
+                <img src="/images/icon-checkmark.svg" alt="Checkmark Icon" class="hidden" />
+              </div>
             </div>
           </div>
         </div>
       </header>
+
+      <div class="hidden api-error-msg flex flex-col flex-center-cross gap-2">
+        <img src="/images/icon-error.svg" alt="Error Icon" />
+        <h2>Something Went Wrong</h2>
+        <p>We couldn't connect to the server (API error) . Please try again in a few moments.</p>
+        <button class="flex gap-2">
+          <img src="/images/icon-retry.svg" alt="Retry Icon" />
+          Retry
+        </button>
+      </div>
 
       <section>
         <h1>How's the sky looking today?</h1>
@@ -68,198 +94,202 @@
           <button class="btn btn-color-blue" type="submit">Search</button>
         </form>
 
-        <div class="weather-info-container flex flex-center-main gap-4">
-          <div class="info-container-left flex flex-col gap-4">
-            <div class="left-top-container">
-              <picture>
-                <source media="(min-width: 578px)" srcset="/images/bg-today-large.svg" />
-                <img src="/images/bg-today-small.svg" alt="" />
-              </picture>
+        <div class="container flex flex-center-main">
+          <div class="no-result-msg">No search result found!</div>
 
-              <div class="overlay">
-                <div class="weather-city-time">
-                  <h2>Berlin, Germany</h2>
-                  <p>Tuesday 5, August 2025</p>
-                </div>
+          <div class="weather-info-container flex flex-center-main gap-4">
+            <div class="info-container-left flex flex-col gap-4">
+              <div class="left-top-container">
+                <picture>
+                  <source media="(min-width: 578px)" srcset="/images/bg-today-large.svg" />
+                  <img src="/images/bg-today-small.svg" alt="" />
+                </picture>
 
-                <div class="weather-temp flex flex-center-cross gap-2">
-                  <img src="/images/icon-sunny.webp" alt="Sun Icon" />
-                  <span>68&#176;</span>
-                </div>
-              </div>
-            </div>
-            <div class="left-middle-container flex gap-4">
-              <div>
-                <h3>Feels like</h3>
-                <span>64*</span>
-              </div>
-              <div>
-                <h3>Humidity</h3>
-                <span>46%</span>
-              </div>
-              <div>
-                <h3>Wind</h3>
-                <span>9 mph</span>
-              </div>
-              <div>
-                <h3>Precipitation</h3>
-                <span>O in</span>
-              </div>
-            </div>
-            <div class="left-bottom-container">
-              <h3>Daily forecast</h3>
-
-              <div class="daily-forecast-container flex gap-2">
-                <div class="forecast">
-                  <span>Tue</span>
-                  <img src="./public/images/icon-rain.webp" alt="Rain Icon" />
-                  <div class="flex flex-between">
-                    <span>68&#176;</span>
-                    <span>57&#176;</span>
+                <div class="overlay">
+                  <div class="weather-city-time">
+                    <h2>Berlin, Germany</h2>
+                    <p>Tuesday 5, August 2025</p>
                   </div>
-                </div>
 
-                <div class="forecast">
-                  <span>Wed</span>
-                  <img src="./public/images/icon-rain.webp" alt="Rain Icon" />
-                  <div class="flex flex-between">
+                  <div class="weather-temp flex flex-center-cross gap-2">
+                    <img src="/images/icon-sunny.webp" alt="Sun Icon" />
                     <span>68&#176;</span>
-                    <span>57&#176;</span>
-                  </div>
-                </div>
-
-                <div class="forecast">
-                  <span>Thu</span>
-                  <img src="./public/images/icon-rain.webp" alt="Rain Icon" />
-                  <div class="flex flex-between">
-                    <span>68&#176;</span>
-                    <span>57&#176;</span>
-                  </div>
-                </div>
-
-                <div class="forecast">
-                  <span>Fri</span>
-                  <img src="./public/images/icon-rain.webp" alt="Rain Icon" />
-                  <div class="flex flex-between">
-                    <span>68&#176;</span>
-                    <span>57&#176;</span>
-                  </div>
-                </div>
-
-                <div class="forecast">
-                  <span>Sat</span>
-                  <img src="./public/images/icon-rain.webp" alt="Rain Icon" />
-                  <div class="flex flex-between">
-                    <span>68&#176;</span>
-                    <span>57&#176;</span>
-                  </div>
-                </div>
-
-                <div class="forecast">
-                  <span>Sun</span>
-                  <img src="./public/images/icon-rain.webp" alt="Rain Icon" />
-                  <div class="flex flex-between">
-                    <span>68&#176;</span>
-                    <span>57&#176;</span>
-                  </div>
-                </div>
-
-                <div class="forecast">
-                  <span>Mon</span>
-                  <img src="./public/images/icon-rain.webp" alt="Rain Icon" />
-                  <div class="flex flex-between">
-                    <span>68&#176;</span>
-                    <span>57&#176;</span>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+              <div class="left-middle-container flex gap-4">
+                <div>
+                  <h3>Feels like</h3>
+                  <span>64&#176;</span>
+                </div>
+                <div>
+                  <h3>Humidity</h3>
+                  <span>46%</span>
+                </div>
+                <div>
+                  <h3>Wind</h3>
+                  <span>9 mph</span>
+                </div>
+                <div>
+                  <h3>Precipitation</h3>
+                  <span>O in</span>
+                </div>
+              </div>
+              <div class="left-bottom-container">
+                <h3>Daily forecast</h3>
 
-          <div class="info-container-right">
-            <div class="hourly-forecast flex justify-between">
-              <h3>Hourly forecast</h3>
+                <div class="daily-forecast-container flex gap-2">
+                  <div class="forecast">
+                    <span>Tue</span>
+                    <img src="/images/icon-rain.webp" alt="Rain Icon" />
+                    <div class="flex flex-between">
+                      <span>68&#176;</span>
+                      <span>57&#176;</span>
+                    </div>
+                  </div>
 
-              <div class="week-dropdown flex flex-center-main gap-1">
-                <span>Tuesday</span>
-                <img src="/images/icon-dropdown.svg" alt="Dropdown Icon" />
+                  <div class="forecast">
+                    <span>Wed</span>
+                    <img src="/images/icon-rain.webp" alt="Rain Icon" />
+                    <div class="flex flex-between">
+                      <span>68&#176;</span>
+                      <span>57&#176;</span>
+                    </div>
+                  </div>
 
-                <div class="dropdown-content flex flex-col gap-3">
-                  <div>Monday</div>
-                  <div>Tuesday</div>
-                  <div>Wednesday</div>
-                  <div>Thursday</div>
-                  <div>Friday</div>
-                  <div>Saturday</div>
-                  <div>Sunday</div>
+                  <div class="forecast">
+                    <span>Thu</span>
+                    <img src="/images/icon-rain.webp" alt="Rain Icon" />
+                    <div class="flex flex-between">
+                      <span>68&#176;</span>
+                      <span>57&#176;</span>
+                    </div>
+                  </div>
+
+                  <div class="forecast">
+                    <span>Fri</span>
+                    <img src="/images/icon-rain.webp" alt="Rain Icon" />
+                    <div class="flex flex-between">
+                      <span>68&#176;</span>
+                      <span>57&#176;</span>
+                    </div>
+                  </div>
+
+                  <div class="forecast">
+                    <span>Sat</span>
+                    <img src="/images/icon-rain.webp" alt="Rain Icon" />
+                    <div class="flex flex-between">
+                      <span>68&#176;</span>
+                      <span>57&#176;</span>
+                    </div>
+                  </div>
+
+                  <div class="forecast">
+                    <span>Sun</span>
+                    <img src="/images/icon-rain.webp" alt="Rain Icon" />
+                    <div class="flex flex-between">
+                      <span>68&#176;</span>
+                      <span>57&#176;</span>
+                    </div>
+                  </div>
+
+                  <div class="forecast">
+                    <span>Mon</span>
+                    <img src="/images/icon-rain.webp" alt="Rain Icon" />
+                    <div class="flex flex-between">
+                      <span>68&#176;</span>
+                      <span>57&#176;</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="hourly-forecast-container">
-              <div class="forecast-hour flex gap-2 flex-center-cross">
-                <img src="./public/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
-                <span>3 PM</span>
+            <div class="info-container-right">
+              <div class="hourly-forecast flex justify-between">
+                <h3>Hourly forecast</h3>
+
+                <div class="week-dropdown flex flex-center-main gap-1">
+                  <span>Tuesday</span>
+                  <img src="/images/icon-dropdown.svg" alt="Dropdown Icon" />
+
+                  <div class="dropdown-content flex flex-col gap-3">
+                    <div>Monday</div>
+                    <div>Tuesday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                    <div>Sunday</div>
+                  </div>
+                </div>
               </div>
 
-              <span>18&#176;</span>
-            </div>
-            <div class="hourly-forecast-container">
-              <div class="forecast-hour flex gap-2 flex-center-cross">
-                <img src="./public/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
-                <span>3 PM</span>
+              <div class="hourly-forecast-container">
+                <div class="forecast-hour flex gap-2 flex-center-cross">
+                  <img src="/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
+                  <span>3 PM</span>
+                </div>
+
+                <span>18&#176;</span>
+              </div>
+              <div class="hourly-forecast-container">
+                <div class="forecast-hour flex gap-2 flex-center-cross">
+                  <img src="/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
+                  <span>3 PM</span>
+                </div>
+
+                <span>18&#176;</span>
+              </div>
+              <div class="hourly-forecast-container">
+                <div class="forecast-hour flex gap-2 flex-center-cross">
+                  <img src="/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
+                  <span>3 PM</span>
+                </div>
+
+                <span>18&#176;</span>
+              </div>
+              <div class="hourly-forecast-container">
+                <div class="forecast-hour flex gap-2 flex-center-cross">
+                  <img src="/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
+                  <span>3 PM</span>
+                </div>
+
+                <span>18&#176;</span>
+              </div>
+              <div class="hourly-forecast-container">
+                <div class="forecast-hour flex gap-2 flex-center-cross">
+                  <img src="/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
+                  <span>3 PM</span>
+                </div>
+
+                <span>18&#176;</span>
+              </div>
+              <div class="hourly-forecast-container">
+                <div class="forecast-hour flex gap-2 flex-center-cross">
+                  <img src="/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
+                  <span>3 PM</span>
+                </div>
+
+                <span>18&#176;</span>
+              </div>
+              <div class="hourly-forecast-container">
+                <div class="forecast-hour flex gap-2 flex-center-cross">
+                  <img src="/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
+                  <span>3 PM</span>
+                </div>
+
+                <span>18&#176;</span>
               </div>
 
-              <span>18&#176;</span>
-            </div>
-            <div class="hourly-forecast-container">
-              <div class="forecast-hour flex gap-2 flex-center-cross">
-                <img src="./public/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
-                <span>3 PM</span>
+              <div class="hourly-forecast-container">
+                <div class="forecast-hour flex gap-2 flex-center-cross">
+                  <img src="/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
+                  <span>3 PM</span>
+                </div>
+
+                <span>18&#176;</span>
               </div>
-
-              <span>18&#176;</span>
-            </div>
-            <div class="hourly-forecast-container">
-              <div class="forecast-hour flex gap-2 flex-center-cross">
-                <img src="./public/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
-                <span>3 PM</span>
-              </div>
-
-              <span>18&#176;</span>
-            </div>
-            <div class="hourly-forecast-container">
-              <div class="forecast-hour flex gap-2 flex-center-cross">
-                <img src="./public/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
-                <span>3 PM</span>
-              </div>
-
-              <span>18&#176;</span>
-            </div>
-            <div class="hourly-forecast-container">
-              <div class="forecast-hour flex gap-2 flex-center-cross">
-                <img src="./public/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
-                <span>3 PM</span>
-              </div>
-
-              <span>18&#176;</span>
-            </div>
-            <div class="hourly-forecast-container">
-              <div class="forecast-hour flex gap-2 flex-center-cross">
-                <img src="./public/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
-                <span>3 PM</span>
-              </div>
-
-              <span>18&#176;</span>
-            </div>
-
-            <div class="hourly-forecast-container">
-              <div class="forecast-hour flex gap-2 flex-center-cross">
-                <img src="./public/images/icon-partly-cloudy.webp" alt="Partly Cloudy Icon" />
-                <span>3 PM</span>
-              </div>
-
-              <span>18&#176;</span>
             </div>
           </div>
         </div>

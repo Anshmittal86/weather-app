@@ -1,64 +1,4 @@
 /* main styling  */
-.app-logo {
-  cursor: pointer;
-}
-.wrapper {
-  width: min(95%, 1200px);
-  margin-inline: auto;
-  min-height: 100vh;
-}
-
-.header {
-  padding-block: 2rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.unit-container {
-  display: flex;
-  width: fit-content;
-  gap: 1.2rem;
-  padding: 1rem 1.4rem;
-  background-color: var(--clr-neutral-800);
-  border-radius: 1rem;
-  position: relative;
-  cursor: pointer;
-}
-
-.unit-dropdown-content {
-  visibility: hidden;
-  width: 20rem;
-  position: absolute;
-  top: 5rem;
-  right: 3rem;
-  z-index: 1000;
-
-  background-color: var(--clr-neutral-800);
-  padding: 1rem;
-  border-radius: 1rem;
-  border: 1px solid var(--clr-neutral-600);
-}
-
-.unit-container:hover .unit-dropdown-content {
-  visibility: visible;
-}
-
-.unit-dropdown-content div div {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-.unit-dropdown-content div h4 {
-  margin-block-end: 1rem;
-  color: var(--clr-neutral-300);
-  font-family: dm-sans-semiBold;
-}
-
-.unit-dropdown-content div div:hover {
-  background-color: var(--clr-neutral-700);
-}
-
 section {
   text-align: center;
   margin-block-end: 5rem;
@@ -80,18 +20,26 @@ h1 {
 #search-input {
   width: 35rem;
   background-color: transparent;
+  cursor: pointer;
 }
 
 ::placeholder {
   color: var(--clr-neutral-0);
 }
 
-.btn-color-blue {
-  background-color: var(--clr-blue-500);
+.btn {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
 }
 
-.weather-info-container {
-  margin-block-start: 5rem;
+.btn-color-blue {
+  background-color: var(--clr-blue-500);
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--clr-blue-700);
 }
 
 .info-container-left {
@@ -263,4 +211,52 @@ h1 {
 
 .hourly-forecast-container .forecast-hour img {
   width: 5.8rem;
+}
+
+.container {
+  margin-block-start: 2.5rem;
+  position: relative;
+}
+
+.weather-info-container {
+  margin-block-start: 5rem;
+  position: absolute;
+  top: -4rem;
+}
+
+.no-result-msg {
+  position: absolute;
+  top: 1rem;
+  font-family: dm-sans-bold;
+}
+
+.api-error-msg {
+  margin-block-start: 4rem;
+}
+
+.api-error-msg img {
+  width: 5rem;
+}
+
+.api-error-msg h2 {
+  font-size: 5rem;
+  font-family: 'bricolage-grotesque-bold';
+}
+
+.api-error-msg p {
+  width: 55rem;
+  text-align: center;
+  color: var(--clr-neutral-300);
+  font-family: 'dm-sans-semiBold';
+}
+
+.api-error-msg button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: var(--clr-neutral-600);
+}
+
+.api-error-msg button img {
+  width: 2rem;
 }
